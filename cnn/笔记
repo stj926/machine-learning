@@ -1,0 +1,4 @@
+激活函数：sigmoid relu manout ELU leakyRelu
+迭代算法：sgd RMSProp Movement adam
+过拟合：Early Stopping  Regularization Dropout BN层
+模型 vgg Inception resnet ..
