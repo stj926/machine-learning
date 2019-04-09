@@ -1,2 +1,2 @@
 # ml
-代码见python/nn
+代码见python/machine-learning
