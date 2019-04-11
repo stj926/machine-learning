@@ -1,44 +1,44 @@
 自信息：表示不确定性的程度
-    I(xi)=log2p(1/xi)=-log2p(xi)
+    I(X)=log2p(1/xi)=-log2p(xi)
     
 熵表示的是不确定性的量度。熵是X的平均信息量，是自信息量的期望
-    H(X)=E(I(xi)=E(-log2p(xi))=∑p(xi)(-log2p(xi))=-∑p(xi)(log2p(xi))
+    H(X)=E(I(X)=E(-log2p(xi))=∑p(xi)(-log2p(xi))=-∑p(xi)(log2p(xi))
     单调性，即发生概率越高的事件，其所携带的信息熵越低。极端案例就是“太阳从东方升起”，因为为确定事件，所以不携带任何信息量。从信息论的角度，认为这句话没有消除任何不确定性
     非负性，即信息熵不能为负。这个很好理解，因为负的信息，即你得知了某个信息后，却增加了不确定性是不合逻辑的
     累加性，即多随机事件同时发生存在的总不确定性的量度是可以表示为各事件不确定性的量度的和：
         A,B同时发生，且A,B相互独立，P(A,B)=P(A)P(B),则H(A,B)=H(A)+H(B)
 
-联合自信息I(xiyj)=log2(1/p(xi,yj))=-log2(p(xi,yj))
+?联合自信息I(XY)=log2(1/p(xi,yj))=-log2(p(xi,yj))
 
 联合熵H(X,Y)表示联合分布的混乱程度
-    联合集XY上，联合自信息I(xiyj)的期望
-    H(X,Y)=E(I(xiyj))=∑∑p(xi,yj)log2(1/p(xi,yj))=-∑∑p(xi,yj)(log2p(xi,yj))
+    联合集XY上，联合自信息I(XY)的期望
+    H(X,Y)=E(I(XY))=∑∑p(xi,yj)log2(1/p(xi,yj))=-∑∑p(xi,yj)(log2p(xi,yj))
 
 互信息I(X,Y)表示两个变量相互间相互依赖程度，是联合分布p(xi,yj)和乘积分布p(xi)p(yi))之间的相对熵
-    I(xi,yj)=∑∑p(xi,yj)log2(1/[p(xi)p(yi)/p(xi,yj)])=∑∑p(xi,yj)log2(p(xi,yj)/p(xi)p(yi))
+    I(X,Y)=∑∑p(xi,yj)log2(1/[p(xi)p(yi)/p(xi,yj)])=∑∑p(xi,yj)log2(p(xi,yj)/p(xi)p(yi))
 
 条件自信息I(Y|X)=log2(1/p(yj/xi))=-log2(p(yj/xi))
 
 条件熵联合分布基于某变量的条件下的熵；
-    联合集XY上，条件自信息I(yj|xi)的期望
+    联合集XY上，条件自信息I(Y|X)的期望
     H(Y|X)
-   =E(I(yj|xi))
+   =E(I(Y|X))
    =Σxip(xi)H(Y|X=xi)
    = Σxip(xi)(-Σyjp(yj|xi)log2p(yj|xi))
    =-ΣxiΣyjp(yj|xi)p(xi)log2p(yj|xi)
-   = -ΣxiΣyjp(xi,yj)log2p(yj|xi)
+   =-ΣxiΣyjp(xi,yj)log2p(yj|xi)
 
 交叉熵CrossEntropy表示两个分布的相近程度的描述
-    在X上，自信息I(yj)的期望
+    在X上，自信息I(Y)的期望
     CE(X,Y)=E[log2(1/p(yj))]=Σp(xi)log2(1/p(yj))=-Σp(xi)log2(p(yj))
 
-相对熵D(X||Y)两个分布的不对称程度的距离,又叫Kullback-Leibler距离
+相对熵D(X||Y)两个分布的不对称程度的距离,又叫Kullback-Leibler距离D(X||Y)=D(Y||X)
     在X上，xxx的期望
     D(X||Y)=Σp(xi)log2(1/(yj/xi))=Σp(xi)log2(xi/yj)
 
 
-I(xi,yj)=I(yj,xi)=I(xi)-I(xi|yj)=I(yj)-I(yj|xi)
-
+I(X,Y)=I(Y,X)=I(X)-I(X|Y)=I(Y)-I(Y|X)
+H(X,Y)=H(X|Y)+H(Y|X)+I(X,Y)
 
 
 
