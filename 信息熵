@@ -1,1 +1,27 @@
+自信息：表示不确定性的程度
+    I(xi)=log2p(1/xi)=-log2p(xi)
+    
+熵表示的是不确定性的量度。熵是X的平均信息量，是自信息量的期望
+    H(X)=E(I(X)=E(-log2p(xi))=∑p(xi)(-log2p(xi))=-∑p(xi)(log2p(xi))
+    单调性，即发生概率越高的事件，其所携带的信息熵越低。极端案例就是“太阳从东方升起”，因为为确定事件，所以不携带任何信息量。从信息论的角度，认为这句话没有消除任何不确定性
+    非负性，即信息熵不能为负。这个很好理解，因为负的信息，即你得知了某个信息后，却增加了不确定性是不合逻辑的
+    累加性，即多随机事件同时发生存在的总不确定性的量度是可以表示为各事件不确定性的量度的和：
+        A,B同时发生，且A,B相互独立，P(A,B)=P(A)P(B),则H(A,B)=H(A)+H(B)
+
+联合熵H(X,Y)表示联合分布的混乱程度
+    H(X,Y)=∑∑p(xi,yj)log2(1/p(xi,yj))=-∑∑p(xi,yj)(log2p(xi,yj))
+
+互信息I(X,Y)表示两个变量相互间相互依赖程度，是联合分布p(xi,yj)和乘积分布p(xi)p(yi))之间的相对熵
+    I(X,Y)=∑∑log2(p(xi,yj)/p(xi)p(yi))
+
+条件熵联合分布基于某变量的条件下的熵
+
+交叉熵
+
+相对熵
+
+
+https://www.cnblogs.com/clairvoyant/p/5826968.html
 https://blog.csdn.net/yujianmin1990/article/details/71213601
+https://blog.csdn.net/qq_39521554/article/details/79078917
+https://blog.csdn.net/qq_27009517/article/details/79338008
