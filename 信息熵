@@ -18,7 +18,8 @@
 
 条件自信息I(Y|X)=log2(1/p(yj/xi))=-log2(p(yj/xi))
 
-#########I(xi;yj)=I(yj;xi)=I(xi)-I(xi|yj)=I(yj)-I(yj|xi)
+########I(xi,yj)=I(yj,xi)=I(xi)-I(xi|yj)=I(yj)-I(yj|xi)
+        I(X,Y)=I(X)-I(X/Y)=I(Y)-I(Y|X)
 
 条件熵联合分布基于某变量的条件下的熵
     H(Y|X)
