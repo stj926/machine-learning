@@ -8,8 +8,10 @@
     累加性，即多随机事件同时发生存在的总不确定性的量度是可以表示为各事件不确定性的量度的和：
         A,B同时发生，且A,B相互独立，P(A,B)=P(A)P(B),则H(A,B)=H(A)+H(B)
 
+联合自信息I(XY)
+
 联合熵H(X,Y)表示联合分布的混乱程度
-    H(X,Y)=∑∑p(xi,yj)log2(1/p(xi,yj))=-∑∑p(xi,yj)(log2p(xi,yj))
+    H(X,Y)=E(I(XY))=∑∑p(xi,yj)log2(1/p(xi,yj))=-∑∑p(xi,yj)(log2p(xi,yj))
 
 互信息I(X,Y)表示两个变量相互间相互依赖程度，是联合分布p(xi,yj)和乘积分布p(xi)p(yi))之间的相对熵
     I(X,Y)=∑∑log2(p(xi,yj)/p(xi)p(yi))
