@@ -23,23 +23,25 @@
     联合集XY上，条件自信息I(Y|X)的期望
     H(Y|X)
    =E(I(Y|X))
-   =Σxip(xi)H(Y|X=xi)
-   = Σxip(xi)(-Σyjp(yj|xi)log2p(yj|xi))
-   =-ΣxiΣyjp(yj|xi)p(xi)log2p(yj|xi)
-   =-ΣxiΣyjp(xi,yj)log2p(yj|xi)
+   =Σp(xi)H(Y|X=xi)
+   = Σp(xi)(-Σp(yj|xi)log2p(yj|xi))
+   =-ΣΣp(yj|xi)p(xi)log2p(yj|xi)
+   =-ΣΣp(xi,yj)log2p(yj|xi)
 
 交叉熵CrossEntropy表示两个分布的相近程度的描述
     在X上，自信息I(Y)的期望
     CE(X,Y)=E[log2(1/p(yj))]=Σp(xi)log2(1/p(yj))=-Σp(xi)log2(p(yj))
 
-相对熵D(X||Y)两个分布的不对称程度的距离,又叫Kullback-Leibler距离D(X||Y)=D(Y||X)
+相对熵D(X||Y)两个分布的不对称程度的距离,又叫Kullback-Leibler距离
     在X上，xxx的期望
     D(X||Y)=Σp(xi)log2(1/(yj/xi))=Σp(xi)log2(xi/yj)
 
-
-I(X;Y)=I(Y;X)=I(X)-I(X|Y)=I(Y)-I(Y|X)
+D(X||Y)!=D(Y||X)
+I(X;Y)=I(Y;X)
 H(X,Y)=H(X|Y)+H(Y|X)+I(X;Y)
-
+      =H(X)+H(Y|X)
+I(X;Y)=H(X)-H(X|Y) 由此可以看出，互信息I(X;Y)是在给定Y知识条件下X的不确定度的缩减量
+CE(X,Y)=H(X)+D(X||Y)
 
 
 熵的资料较杂，列出几个易于自己理解的
