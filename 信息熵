@@ -15,11 +15,9 @@
     H(X,Y)=E(I(xiyj))=∑∑p(xi,yj)log2(1/p(xi,yj))=-∑∑p(xi,yj)(log2p(xi,yj))
 
 互信息I(X,Y)表示两个变量相互间相互依赖程度，是联合分布p(xi,yj)和乘积分布p(xi)p(yi))之间的相对熵
-    I(xi,yj)=∑∑log2(p(xi,yj)/p(xi)p(yi))
+    I(xi,yj)=∑∑p(xi,yj)log2(1/[p(xi)p(yi)/p(xi,yj)])=∑∑p(xi,yj)log2(p(xi,yj)/p(xi)p(yi))
 
 条件自信息I(Y|X)=log2(1/p(yj/xi))=-log2(p(yj/xi))
-
-########I(xi,yj)=I(yj,xi)=I(xi)-I(xi|yj)=I(yj)-I(yj|xi)
 
 条件熵联合分布基于某变量的条件下的熵；
     联合集XY上，条件自信息I(yj|xi)的期望
@@ -31,11 +29,17 @@
    = -ΣxiΣyjp(xi,yj)log2p(yj|xi)
 
 交叉熵CrossEntropy表示两个分布的相近程度的描述
-    CE(X,Y)=Ep(xi)[log2(1/p(yj))]=Σp(xi)log2(1/yj)
+    在X上，自信息I(yj)的期望
+    CE(X,Y)=E[log2(1/p(yj))]=Σp(xi)log2(1/p(yj))=-Σp(xi)log2(p(yj))
 
-相对熵D(X,Y)两个分布的不对称程度的距离,又叫Kullback-Leibler距离
-    D(X,Y)=Σp(xi)log2(1/(yj/xi))=Σp(xi)log2(xi/yj)
-    
+相对熵D(X||Y)两个分布的不对称程度的距离,又叫Kullback-Leibler距离
+    在X上，xxx的期望
+    D(X||Y)=Σp(xi)log2(1/(yj/xi))=Σp(xi)log2(xi/yj)
+
+
+I(xi,yj)=I(yj,xi)=I(xi)-I(xi|yj)=I(yj)-I(yj|xi)
+
+
 
 
 熵的资料较杂，列出几个易于自己理解的
