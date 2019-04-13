@@ -1,1 +1,13 @@
+1错误率和精度
 
+2查准率:P=TP/(TP+FN)
+ 查全率:R=TP/(TP+FP)
+ F1=2PR/(P+R)
+ 
+3对正例率TPR=TP/(TP+FN)
+ 错正例率FPR=FP/(TN+FP)
+ 
+ 
+ ROC曲线
+ AUC曲线
+ 
