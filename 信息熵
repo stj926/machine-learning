@@ -43,6 +43,9 @@ H(X,Y)=H(X|Y)+H(Y|X)+I(X;Y)
 I(X;Y)=H(X)-H(X|Y) 由此可以看出，互信息I(X;Y)是在给定Y知识条件下X的不确定度的缩减量
 CE(X,Y)=H(X)+D(X||Y)
 
+信息增益：I(X;Y)
+信息增益比：I(X;Y)/H(X)
+
 
 熵的资料较杂，列出几个易于自己理解的
 https://www.cnblogs.com/liugl7/p/5385061.html
