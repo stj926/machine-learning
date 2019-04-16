@@ -14,7 +14,7 @@
     联合集XY上，联合自信息I(X,Y)的期望
     H(X,Y)=E(I(X,Y))=∑∑p(xi,yj)log2(1/p(xi,yj))=-∑∑p(xi,yj)(log2p(xi,yj))
 
-互信息I(X;Y)表示两个变量相互间相互依赖程度，是联合分布p(xi,yj)和乘积分布p(xi)p(yi))之间的相对熵，即决策树中的信息增益
+互信息I(X;Y)表示两个变量相互间相互依赖程度，是联合分布p(xi,yj)和乘积分布p(xi)p(yj))之间的相对熵，即决策树中的信息增益
     I(X;Y)=∑∑p(xi,yj)log2(1/[p(xi)p(yi)/p(xi,yj)])=∑∑p(xi,yj)log2(p(xi,yj)/p(xi)p(yi))
 
 条件自信息I(Y|X)=log2(1/p(yj/xi))=-log2(p(yj/xi))
@@ -29,19 +29,19 @@
    =-ΣΣp(xi,yj)log2p(yj|xi)
 
 交叉熵CrossEntropy表示两个分布的相近程度的描述
-    在X上，自信息I(Y)的期望
-    CE(X,Y)=E[log2(1/p(yj))]=Σp(xi)log2(1/p(yj))=-Σp(xi)log2(p(yj))
-
-相对熵D(X||Y)两个分布的不对称程度的距离,又叫Kullback-Leibler距离
     在X上，xxx的期望
-    D(X||Y)=Σp(xi)log2(1/(yj/xi))=Σp(xi)log2(xi/yj)
+    CE(p,q)=E[log2(1/q(xi))]=Σp(xi)log2(1/q(xi))=-Σp(xi)log2(q(xi))
+
+相对熵D(p||q)两个分布的不对称程度的距离,又叫Kullback-Leibler距离
+    在X上，xxx的期望
+    D(p||q)=Σp(xi)log2(1/[q(xi)/p(xi))]=Σp(xi)log2(p(xi)/q(xi))
 
 D(X||Y)!=D(Y||X)
 I(X;Y)=I(Y;X)
 H(X,Y)=H(X|Y)+H(Y|X)+I(X;Y)
       =H(X)+H(Y|X)
 I(X;Y)=H(X)-H(X|Y) 由此可以看出，互信息I(X;Y)是在给定Y知识条件下X的不确定度的缩减量
-CE(X,Y)=H(X)+D(X||Y)
+CE(p,q)=H(X)+D(p||q)
 
 熵的资料较杂，列出几个易于自己理解的
 https://www.cnblogs.com/liugl7/p/5385061.html
