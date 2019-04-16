@@ -53,6 +53,7 @@ https://blog.csdn.net/qq_27009517/article/details/79338008
 信息增益：I(X;Y)
 信息增益比：I(X;Y)/H(X)
 基尼系数：Gini(p)=Σpk(1-pk)=1-Σpk^2 基尼指数表示不确定性。基尼指数值越大，样本集合的不确定性也就越大
+决策树损失函数：
 
 
 https://blog.csdn.net/wzk1996/article/details/81941572
