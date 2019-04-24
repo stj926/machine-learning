@@ -24,3 +24,6 @@ def detect_face(img):
     
     #只返回图像的正面部分
     return gray[y:y+w, x:x+h], faces[0]
+
+
+http://www.cnblogs.com/zhuifeng-mayi/p/9171383.html
