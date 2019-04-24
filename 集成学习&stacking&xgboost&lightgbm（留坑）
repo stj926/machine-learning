@@ -1,1 +1,22 @@
+bagging是减少variance，而boosting是减少bias
 
+
+
+bagging:
+随机森林
+
+
+
+boosting:
+adaboost
+
+gb
+
+gbdt
+
+xgboost
+
+lightgbm
+
+
+https://www.cnblogs.com/earendil/p/8872001.html
