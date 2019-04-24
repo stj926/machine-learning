@@ -1,4 +1,5 @@
 bagging是减少variance，而boosting是减少bias
+https://www.cnblogs.com/earendil/p/8872001.html
 
 
 
@@ -8,15 +9,17 @@ bagging:
 
 
 boosting:
-adaboost
+adaboost:通过错误率调整弱分离器的权重再调整样本权重
+https://www.cnblogs.com/ScorpioLu/p/8295990.html
 
-gb
+gb:通过拟合伪残差（也就是梯度方向）来构造弱分类器
 
-gbdt
+gbdt:弱分类器为CART回归树的gb
 
-xgboost
+xgboost：gbdt的强化版
+XGBoost与GBDT主要的不同在于其目标函数使用了正则项并且利用了二阶导数信息
 
-lightgbm
+lightgbm：留坑
 
 
-https://www.cnblogs.com/earendil/p/8872001.html
+
