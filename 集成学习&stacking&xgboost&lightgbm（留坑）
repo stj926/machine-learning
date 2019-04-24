@@ -1,6 +1,10 @@
 bagging是减少variance，而boosting是减少bias
 https://www.cnblogs.com/earendil/p/8872001.html
 
+bagging：每个分类器都随机从原样本中做有放回的采样，训练基模型，最后根据多个基模型的预测结果产出最终的结果
+         bagging的一种常见方法是我们训练好多模型：SVM, 决策树，DNN等，然后将最后再用一个lr做组合
+boosting：每次对训练集进行转换后重新训练出基模型，最后再综合所有的基模型预测结果
+stacking：stacking的思想是将每个基模型的输出组合起来作为一个特征向量，重新进行训练
 
 
 bagging:
@@ -21,5 +25,5 @@ XGBoost与GBDT主要的不同在于其目标函数使用了正则项并且利用
 
 lightgbm：留坑
 
-
-
+https://www.cnblogs.com/wxquare/p/5541414.html
+https://blog.csdn.net/weiyongle1996/article/details/77856131
