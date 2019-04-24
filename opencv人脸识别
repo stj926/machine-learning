@@ -1,0 +1,26 @@
+#使用OpenCV用来检测脸部的函数
+import cv2
+
+
+def detect_face(img):
+    #将测试图像转换为灰度图像，因为opencv人脸检测器需要灰度图像
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    
+    #加载OpenCV人脸检测器，我正在使用的是快速的LBP
+    #还有一个更准确但缓慢的Haar分类器
+    face_cascade = cv2.CascadeClassifier('opencv-files/lbpcascade_frontalface.xml')
+
+    #让我们检测多尺度（一些图像可能比其他图像更接近相机）图像
+    #结果是一张脸的列表
+    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=5);
+    
+    #如果未检测到面部，则返回原始图像
+    if (len(faces) == 0):
+        return None, None
+    
+    #假设只有一张脸，
+    #提取面部区域
+    (x, y, w, h) = faces[0]
+    
+    #只返回图像的正面部分
+    return gray[y:y+w, x:x+h], faces[0]
