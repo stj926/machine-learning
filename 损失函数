@@ -1,1 +1,5 @@
 keras：
+多标签分类：binary_crossentropy
+多类别分类：categorical_crossentropy
+
+https://blog.csdn.net/somtian/article/details/79614570
