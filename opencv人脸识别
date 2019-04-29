@@ -27,3 +27,6 @@ def detect_face(img):
 
 
 http://www.cnblogs.com/zhuifeng-mayi/p/9171383.html
+
+
+使用Face_recognition和dlib人脸检测:
